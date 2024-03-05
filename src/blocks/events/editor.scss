@@ -1,0 +1,18 @@
+.wp-block-festival-events {
+    .event-date-card {
+        box-sizing: border-box;
+    }
+
+    .event-title {
+        margin-top: 0;
+        line-height: 1.2;
+    }
+
+    .festival-no-events {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 6rem;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "festival/events",
+  "version": "0.1.0",
+  "title": "Event List",
+  "category": "festival-blocks",
+  "icon": "calendar-alt",
+  "description": "Display a list of events in a grid or list format.",
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "textdomain": "festival",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "perPage": {
+      "default": "5",
+      "type": "integer"
+    },
+    "showPagination": {
+      "default": false,
+      "type": "boolean"
+    },
+    "category": {
+      "type": "array"
+    },
+    "style": {
+      "default": "list",
+      "type": "string"
+    }
+  }
+}
