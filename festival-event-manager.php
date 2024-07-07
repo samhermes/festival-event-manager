@@ -19,6 +19,18 @@
 define( 'FESTIVAL_PATH', plugin_dir_path( __FILE__ ) );
 
 /**
+ * Include template loader.
+ */
+if ( ! class_exists( 'Gamajo_Template_Loader' ) ) {
+	require FESTIVAL_PATH . '/inc/templates/class-gamajo-template-loader.php';
+}
+
+/**
+ * Set up template loader.
+ */
+require_once FESTIVAL_PATH . 'inc/templates/class-festival-template-loader.php';
+
+/**
  * Register custom post type.
  */
 require_once FESTIVAL_PATH . 'inc/post-type.php';
@@ -56,7 +68,7 @@ require_once FESTIVAL_PATH . 'inc/block-category.php';
 /**
  * Set up a custom single template.
  */
-require_once FESTIVAL_PATH . 'inc/template.php';
+require_once FESTIVAL_PATH . 'inc/templates/index.php';
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.

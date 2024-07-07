@@ -12,10 +12,12 @@
  */
 function festival_custom_single_template( $single ) {
 	global $post;
+	// Create an instance of the template loader.
+	$template_loader = new Festival_Template_Loader();
 
 	if ( $post->post_type === 'festival_events' ) {
-		if ( file_exists( FESTIVAL_PATH . '/template-parts/single-festival-event.php' ) ) {
-			return FESTIVAL_PATH . '/template-parts/single-festival-event.php';
+		if ( file_exists( FESTIVAL_PATH . '/templates/single-event.php' ) ) {
+			return $template_loader->get_template_part( 'single-event', null, false );
 		}
 	}
 
