@@ -2,7 +2,7 @@
 
 WordPress plugin for creating and managing events
 
-## What's Included
+## What's included
 
 - Custom Post Type: Events
 - Custom Taxonomy: Event Categories
